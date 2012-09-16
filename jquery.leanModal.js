@@ -45,11 +45,16 @@
         			'position' : 'fixed',
         			'opacity' : 0,
         			'z-index': 11000,
-        			'left' : 50 + '%',
-        			'margin-left' : -(modal_width/2) + "px",
         			'top' : o.top + "px"
         		
         		});
+
+            if ($('html').outerWidth() >= modal_width) {
+              $(modal_id).css({
+                'left' : 50 + '%',
+                'margin-left' : -(modal_width/2) + "px"
+              });
+            }
 
         		$(modal_id).fadeTo(200,1);
 
