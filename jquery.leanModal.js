@@ -49,7 +49,9 @@
         		
         		});
 
-            if ($('html').outerWidth() >= modal_width) {
+            if ($('html').outerWidth() < modal_width) {
+              $(modal_id).css('width', 'auto');
+            } else {
               $(modal_id).css({
                 'left' : 50 + '%',
                 'margin-left' : -(modal_width/2) + "px"
